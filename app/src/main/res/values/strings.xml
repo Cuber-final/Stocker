@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Stocker</string>
+    <string name="textOne">首页</string>
+    <string name="textTwo">行情</string>
+    <string name="textThree">资讯</string>
+    <string name="userCenter">用户</string>
+    <string name="searchBtn">搜索</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

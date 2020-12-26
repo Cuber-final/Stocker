@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.stocker.activities.stockCharts">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/customBlue">
+
+                <ImageButton
+                    android:id="@+id/userIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/icon_vertical_margin"
+                    android:layout_weight="1"
+                    android:background="#0000"
+                    android:contentDescription="@string/userCenter"
+                    android:onClick="toInvader"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/user"
+                    tools:ignore="OnClick" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="@string/app_name"
+                    android:textAlignment="center"
+                    tools:ignore="RtlCompat">
+
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/mailIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/icon_vertical_margin"
+                    android:layout_weight="1"
+                    android:background="#0000"
+                    android:contentDescription="@string/userCenter"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mail" />
+
+                <ImageButton
+                    android:id="@+id/scanQrIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/icon_vertical_margin"
+                    android:layout_weight="1"
+                    android:background="#0000"
+                    android:contentDescription="@string/userCenter"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/scan_icon" />
+
+                <ImageButton
+                    android:id="@+id/searchIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/icon_vertical_margin"
+                    android:layout_weight="1"
+                    android:background="#0000"
+                    android:contentDescription="@string/userCenter"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/search" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <!--用于显示当前股票各版块信息-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/block_Margin"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/return_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/icon_vertical_margin"
+                        android:layout_weight="1"
+                        android:background="#0000"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/back"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/stockView_CodeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:text="代码名称"
+                        android:textAlignment="center"
+
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/Code"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="代码"
+                        android:textAlignment="center"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5sp"
+                android:background="@color/customBlack" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_marginVertical="10dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <!--用于显示当前股票各版块信息-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/block_Margin"
+                    android:layout_weight="2"
+                    android:elevation="5sp"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:id="@+id/n1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="现价"
+                        android:textAlignment="center"
+                        android:textColor="@color/customLightRed"
+                        android:textSize="18sp"
+                        tools:ignore="RtlCompat" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/n2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=" - - "
+                            android:textAlignment="center"
+                            tools:ignore="RtlCompat" />
+
+                        <TextView
+                            android:id="@+id/n3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=" - - "
+                            android:textAlignment="center"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/block_Margin"
+                    android:layout_weight="1"
+                    android:elevation="5sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/n4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="@dimen/block_Margin"
+                        android:layout_weight="1"
+                        android:contentDescription="最高价"
+                        android:text="高88.88"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/n5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="@dimen/block_Margin"
+                        android:layout_weight="1"
+                        android:contentDescription="最低价"
+                        android:text="低75.00"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/block_Margin"
+                    android:layout_weight="1"
+
+                    android:elevation="5sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/n6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="@dimen/block_Margin"
+                        android:layout_weight="1"
+                        android:contentDescription="开盘价"
+                        android:text="开76.10"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/n7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="@dimen/block_Margin"
+                        android:layout_weight="1"
+                        android:contentDescription="昨日收盘价"
+                        android:text="收85.10"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/block_Margin"
+                    android:layout_weight="1"
+
+                    android:elevation="5sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/n8"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="@dimen/block_Margin"
+                        android:layout_weight="1"
+                        android:contentDescription="金额"
+                        android:text="金23.47亿"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/n9"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="@dimen/block_Margin"
+                        android:layout_weight="1"
+                        android:contentDescription="换手率"
+                        android:text="换67.09%"
+                        android:textAlignment="center"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5sp"
+                android:background="@color/customBlue" />
+
+            <LinearLayout
+                android:id="@+id/data_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/block_Margin"
+                        android:text="领涨个股"
+                        android:textAlignment="textStart" />
+
+                    <com.example.stocker.toolsOpe.g_webView
+                        android:id="@+id/kChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:focusable="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                    </com.example.stocker.toolsOpe.g_webView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5sp"
+                android:background="@color/colorSoft" />
+
+            <ImageView
+
+                android:id="@+id/rKPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

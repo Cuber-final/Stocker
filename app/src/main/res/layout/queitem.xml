@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="20sp"
+    android:layout_marginVertical="@dimen/block_Margin">
+
+    <TextView
+        android:id="@+id/queItem_code"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="代码"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/queItem_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="股票名称"
+        android:textAlignment="center" />
+</LinearLayout>

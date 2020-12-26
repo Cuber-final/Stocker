@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorSoft">#4b8db9</color>
+    <color name="cusColor1">#e0cba4</color>
+    <color name="cusColor2">#8de992</color>
+    <color name="colorLight">#ffffff</color>
+    <color name="greyC1">#80766e</color>
+    <color name="customDeepRed">#6b0c22</color>
+    <color name="customLightRed">#d9042b</color>
+    <color name="customBlue">#588c8c</color>
+    <color name="customBlack">#011c26</color>
+    <color name="customBrown">#f4cb89</color>
+
+</resources>
